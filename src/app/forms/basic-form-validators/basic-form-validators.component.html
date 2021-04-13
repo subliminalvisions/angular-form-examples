@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+  
+  <form [formGroup]="newForm" (ngSubmit)="callingFunction()">
+    <h3>Enter Your Info  </h3>
+  
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label> <br>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label> <br>
+  
+  <label>
+    Email:
+    <input type="email" formControlName="email" name="email" ngModel [email]="true">
+  </label> <br>
+  
+  <div *ngIf="f.email.touched && f.email.errors" class="alert alert-danger">
+  
+    {{ f.email.errors | json }}
+    <div *ngIf="f.email.errors.required">email is required.</div>
+    <div *ngIf="f.email.errors.minlength">email should be 3 character.</div>
+    <div *ngIf="f.email.errors.cannotContainSpace">emai can not contain space.</div>
+    <div *ngIf="f.email.errors.pattern">pls check that it's a valid email</div>
+  </div>
+  
+  
+  <label>
+    Age:
+    <input type="text" formControlName="age">
+  </label>
+  <div formGroupName="stackDetails">
+    <h3>Stack Details</h3>
+  
+    <label>
+      Stack:
+      <input type="text" formControlName="stack">
+    </label> <br>
+  
+    <label>
+      Experience:
+      <input type="text" formControlName="experience">
+    </label>
+  </div>
+  <div formGroupName="address">
+    <h3>Address</h3>
+  
+    <label>
+      Country:
+      <input type="text" formControlName="country">
+    </label> <br>
+  
+    <label>
+      City:
+      <input type="text" formControlName="city">
+    </label>
+  </div>
+  <button type="submit" [disabled]="!newForm.valid">Submit Application</button>
+  <p>
+    Real-time data: {{ newForm.value | json }}
+  </p>
+  <p>
+    Your form status is : {{ newForm.status }}
+  </p>
+  </form>
+  
+  </div>
+  </div>
+  
