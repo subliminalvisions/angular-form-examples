@@ -17,6 +17,10 @@ import { FormStepTitlePipe } from './forms/multi-step-form//form-step-title.pipe
 import { MultiStepFormComponent } from './forms/multi-step-form/multi-step-form.component';
 import { MultiStepFormPageComponent } from './forms/multi-step-form/multi-step-form-page.component';
 
+import { StepDirective } from './forms/step-by-step-form2/step.directive';
+import { StepByStepForm2Component } from './forms/step-by-step-form2/step-by-step-form2.component';
+import { StepSelectorComponent } from './forms/step-by-step-form2/step-selector.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,10 @@ import { MultiStepFormPageComponent } from './forms/multi-step-form/multi-step-f
     ConditionalFormFieldsComponent,
     MultiStepFormComponent,
     FormStepTitlePipe,
-    MultiStepFormPageComponent
+    MultiStepFormPageComponent,
+    StepByStepForm2Component,
+    StepSelectorComponent,
+    StepDirective
   ],
   imports: [
     BrowserModule,

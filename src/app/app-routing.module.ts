@@ -4,11 +4,13 @@ import { BasicFormValidatorsComponent } from './forms/basic-form-validators/basi
 import { MultiStepFormPageComponent } from './forms/multi-step-form/multi-step-form-page.component';
 import { ConditionalFormFieldsComponent } from './forms/conditional-form-fields/conditional-form-fields.component';
 import { ConditionalFormValidatorsComponent } from './forms/conditional-form-validators/conditional-form-validators.component';
+import { StepByStepForm2Component } from './forms/step-by-step-form2/step-by-step-form2.component';
 
 const routes: Routes = [
   
   {path:'basic-form-validators', component: BasicFormValidatorsComponent},
   {path:'multi-step-form', component: MultiStepFormPageComponent},
+  {path:'step-by-step-form2', component: StepByStepForm2Component},
   {path:'conditional-form', component: ConditionalFormFieldsComponent},
   {path:'conditional-validation', component: ConditionalFormValidatorsComponent}
 
